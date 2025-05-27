@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Avaliação de Viagem</title>
+  <link rel="stylesheet" href="../styles/FeedbackCSS.css">
+</head>
+<body>
+
+  <header class="hero">
+    <div class="container">
+      <div class="top-bar">
+        <h1 class="logo">ExploMar</h1>
+        <div class="flags">
+          <img src="https://flagcdn.com/w40/br.png" alt="BR" />   
+          <input type="text" name="" class="top-bar-search" placeholder="Pesquise aqui">
+        <button class="btn-login"><a href="#index -HOME">LOGIN</a></button>
+        <button class="btn-outline"><a href="#">Cadastre-se</a></button>
+       </div>
+      </div>
+      
+      <div class="hero-content">
+        <h2>Sua próxima viagem começa em Maricá</h2>
+        <nav class="menu">
+          <button class="menu-item"><a href="home.html" target="_self">inicio</a></button>
+          <!-- Menu suspenso Destinos -->
+          <div class="menu-suspenso">
+            <button class="botao-menu-suspenso">Destinos ▾</button>
+            <div class="conteudo-menu-suspenso">
+              <a href="#">Centro</a>
+              <a href="#">Inoã</a>
+              <a href="#">Ponta negra</a>
+              <a href="Itaipuaçu.html" target="_self">Itaipuaçu</a>
+            </div>
+          </div>
+          <button class="menu-item"><a href="Guias-turisticos.html" target="_self">Guia Turísticos</a></button>
+          <button class="menu-item"><a href="TrabalheConosco.html" target="self">Trabalhe conosco</a></button>
+          <button class="menu-item active">Avaliação</button>
+        </nav>
+
+      </div>
+    </div>
+  </header>
+
+  <div class="breadcrumb">Início > Avaliação</div>
+
+  <h1>Avalie sua viagem</h1>
+
+  <form id="avaliacaoForm" onsubmit="return validarFormulario()">
+    <div>
+      <fieldset>
+        <legend class="legend"><strong>📅 Dados para contato</strong></legend>
+
+        <div class="form-group">
+          <label for="nome">Nome</label>
+          <input type="text" id="nome" placeholder="Nome completo" class="error">
+          <span class="error-text">Campo obrigatório</span>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="exemplo@email.com">
+        </div>
+
+        <div class="form-group">
+          <label for="foto">Envie foto da sua viagem</label>
+          <div class="file-upload">
+            <input type="file" id="foto">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="estrelas">Avalie com estrelinha</label>
+          <div class="stars">
+            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+
+    <div class="form-group">
+      <label for="comentario">Comentário</label>
+      <textarea id="comentario" placeholder="Escreva aqui seu comentário"></textarea>
+    </div>
+
+    <div class="submit-button">
+      <button type="submit">ENVIAR AVALIAÇÃO</button>
+    </div>
+  </form>
+
+  <script src="./scripts/FeedbackJS.js"></script>
+</body>
+</html>
